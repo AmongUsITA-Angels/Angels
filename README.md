@@ -3,4 +3,4 @@ An Unfallen Launcher's plug-in by Among Us ITA | Angels. This repository contain
 Unfallen Launcher: https://bit.ly/UnfallenLauncher
 
 ## What is it for?
-Angels is used to update Among Us on PC automatically.
+Angels is used to automatically update Among Us on PC.
