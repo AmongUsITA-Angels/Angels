@@ -1,0 +1,508 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Unfallen Launcher</name>
+  </assembly>
+  <members>
+    <member name="T:UnfallenLauncherAPI.StandaloneServiceAttribute">
+      <summary>
+        Specifies that the service cannot be a member of an <see cref="T:UnfallenLauncherAPI.IHost"/> type.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.ExcludeFromHostAttribute">
+      <summary>
+        Specifies that the property service is not part of the <see cref="T:UnfallenLauncherAPI.IHost"/> class.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.IDataService`1">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IService"/> generic interface with a Value property of <see cref="!:T"/> type and a ValueChanged event.
+      </summary>
+      <typeparam name="T">A data type.</typeparam>
+    </member>
+    <member name="E:UnfallenLauncherAPI.IDataService`1.ValueChanged">
+      <summary>
+        Occurs when <see cref="P:UnfallenLauncherAPI.IDataService`1.Value"/> is changed.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.IDataService`1.Value">
+      <summary>
+        The value of the service.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.Default.DataServiceBase`1">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IService"/> generic class base with a Value property of <see cref="!:T"/> type and a ValueChanged event.
+      </summary>
+      <typeparam name="T">A data type.</typeparam>
+    </member>
+    <member name="T:UnfallenLauncherAPI.Default.ICompleteHost">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IHost"/> interface with UnfallenLauncherAPI.Services namespace services properties.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.Default.CompleteHostBase">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IHost"/> class base with UnfallenLauncherAPI.Services namespace services properties.
+      </summary>
+    </member>
+    <member name="M:UnfallenLauncherAPI.Default.CompleteHostBase.OnStart">
+      <summary>
+        <inheritdoc cref="M:UnfallenLauncherAPI.IHost.OnStart"/>
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.Default.DropDownListBase">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IService"/> class base with a <see cref="T:System.String"/> <see langword="array"/> Items property,
+        a ItemsChanged event,
+        a <see cref="T:System.String"/> Value property and a ValueChanged event.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.Default.EventListenerServiceBase">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IService"/> class base with an event.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.Default.Services.OpeningGameEventListener.Data">
+      <summary>
+        The game name.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.Default.GameService">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IService"/> base class with a <see cref="T:System.String"/> URI property,
+        a <see cref="T:System.String"/> Args property,
+        a <see cref="T:System.String"/> GameName property,
+        an <see cref="T:System.Drawing.Image"/> Icon property.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.Default.ItemListBase`1">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IService"/> generic class base with an Items property of <see cref="!:T"/> <see langword="array"/> type and an ItemsChanged event.
+      </summary>
+      <typeparam name="T">A data type.</typeparam>
+    </member>
+    <member name="T:UnfallenLauncherAPI.Default.ReadOnlyDataServiceBase`1">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IService"/> generic class base with a read-only Value property of <see cref="!:T"/> type and a ValueChanged event.
+      </summary>
+      <typeparam name="T">A data type.</typeparam>
+    </member>
+    <member name="T:UnfallenLauncherAPI.Default.TabBase">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IService"/> class base with a <see cref="T:System.Boolean"/> IsOpen property,
+        an Opened event and a Closed event.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.Default.VisibleServiceBase">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IService"/> class base with a <see cref="T:System.Boolean"/> Visible property and a VisibleChanged event.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.Default.WindowBase">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IService"/> class base with a <see cref="T:System.Drawing.Point"/> Location property,
+        a LocationChanged event,
+        a <see cref="T:UnfallenLauncherAPI.WindowState"/> State property,
+        a StateChanged event,
+        a <see cref="T:System.Boolean"/> Notify property,
+        a ClosedToNotify event and an OpenedFromNotify event.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.Default.WorkerBase">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IService"/> class base with a DoWork method and a Worked event.
+        an Opened event and a Closed event.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.IDropDownList">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IService"/> interface with a <see cref="T:System.String"/> <see langword="array"/> Items property,
+        a ItemsChanged event,
+        a <see cref="T:System.String"/> Value property and a ValueChanged event.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.WindowState">
+      <summary>
+        The window state.
+      </summary>
+    </member>
+    <member name="F:UnfallenLauncherAPI.WindowState.Normal">
+      <summary>
+        Window normal state.
+      </summary>
+    </member>
+    <member name="F:UnfallenLauncherAPI.WindowState.Minimized">
+      <summary>
+        Window minimized state.
+      </summary>
+    </member>
+    <member name="F:UnfallenLauncherAPI.WindowState.Maximized">
+      <summary>
+        Window maximized state.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.BackColorState">
+      <summary>
+        The background color.
+      </summary>
+    </member>
+    <member name="F:UnfallenLauncherAPI.BackColorState.Default">
+      <summary>
+        The default background color (#282828).
+      </summary>
+    </member>
+    <member name="F:UnfallenLauncherAPI.BackColorState.Dark">
+      <summary>
+        The dark background color (#141414).
+      </summary>
+    </member>
+    <member name="F:UnfallenLauncherAPI.BackColorState.Red">
+      <summary>
+        The red background color (#1E0000).
+      </summary>
+    </member>
+    <member name="F:UnfallenLauncherAPI.BackColorState.Blue">
+      <summary>
+        The blue background color (#00001E).
+      </summary>
+    </member>
+    <member name="F:UnfallenLauncherAPI.BackColorState.Purple">
+      <summary>
+        The purple background color (#1E001E).
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.WallpaperSizeModeState">
+      <summary>
+        The wallpaper size mode.
+      </summary>
+    </member>
+    <member name="F:UnfallenLauncherAPI.WallpaperSizeModeState.Center">
+      <summary>
+        The image is centered with no resize
+      </summary>
+    </member>
+    <member name="F:UnfallenLauncherAPI.WallpaperSizeModeState.Zoom">
+      <summary>
+        The image is centered and resized to fill the wallpaper box (fixed aspect ratio).
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.IEventListenerService">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IService"/> interface with an event.
+      </summary>
+    </member>
+    <member name="E:UnfallenLauncherAPI.IEventListenerService.Event">
+      <summary>
+        The listened event.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.IGameService">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IService"/> interface with a <see cref="T:System.String"/> URI property,
+        a <see cref="T:System.String"/> Args property,
+        a <see cref="T:System.String"/> GameName property,
+        an <see cref="T:System.Drawing.Image"/> Icon property.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.IGameService.Icon">
+      <summary>
+        The game icon.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.IGameService.GameName">
+      <summary>
+        The game name.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.IGameService.Args">
+      <summary>
+        The game command line arguments.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.IGameService.URI">
+      <summary>
+        The game uniform resource identifier.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.IHost">
+      <summary>
+        <b>
+          This interface is a base to create an host class.<br/>
+          Host classes are sets of <see cref="T:UnfallenLauncherAPI.IService"/> properties.
+        </b>
+        <para/>This interface has one member:<br/>
+        - OnStart method<br/>
+      </summary>
+    </member>
+    <member name="M:UnfallenLauncherAPI.IHost.OnStart">
+      <summary>
+        This event method is called when the host starts.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.IMetadataType`1">
+      <summary>
+        Provide a Data property that contains metadata.
+      </summary>
+      <typeparam name="T">
+        Type of <see cref="P:UnfallenLauncherAPI.IMetadataType`1.Data"/>
+      </typeparam>
+    </member>
+    <member name="P:UnfallenLauncherAPI.IMetadataType`1.Data">
+      <summary>
+        Metadata.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.IPlugin">
+      <summary>
+        <b>
+          This interface is a base to create a plug-in class.<br/>
+          Plug-in classes provide an host object and metadata.<br/>
+          Unfallen Launcher imports plug-in classes of plug-in libraries and than calls
+        </b><see cref="M:UnfallenLauncherAPI.IHost.OnStart"/><b> methods.</b>
+        <para/>This interface has seven members:<br/>
+        - <see cref="T:UnfallenLauncherAPI.IHost"/> Host property<br/>
+        - <see cref="T:System.Boolean"/> VisibleInMenu property<br/>
+        - <see cref="T:System.UInt32"/> Version property<br/>
+        - <see cref="T:System.String"/> Developer property<br/>
+        - <see cref="T:System.String"/> Name property<br/>
+        - <see cref="T:System.Drawing.Image"/> Icon property<br/>
+        - OnPluginMenuItemClick method
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.IPlugin.Host">
+      <summary>
+        The plug-in host.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.IPlugin.VisibleInMenu">
+      <summary>
+        If it's true, the plug-in menu is visible, otherwise, no.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.IPlugin.Version">
+      <summary>
+        The plug-in version.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.IPlugin.Developer">
+      <summary>
+        The plug-in developer name.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.IPlugin.Name">
+      <summary>
+        The plug-in name.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.IPlugin.Icon">
+      <summary>
+        The plug-in icon.
+      </summary>
+    </member>
+    <member name="M:UnfallenLauncherAPI.IPlugin.OnPluginMenuItemClick">
+      <summary>
+        This event method is called when the user clicks on the plug-in menu item.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.IItemList`1">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IService"/> generic interface with an Items property of <see cref="!:T"/> <see langword="array"/> type and an ItemsChanged event.
+      </summary>
+      <typeparam name="T">A data type.</typeparam>
+    </member>
+    <member name="E:UnfallenLauncherAPI.IItemList`1.ItemsChanged">
+      <summary>
+        Occurs when <see cref="P:UnfallenLauncherAPI.IItemList`1.Items"/> is changed.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.IItemList`1.Items">
+      <summary>
+        The items of the service.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.IReadOnlyDataService`1">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IService"/> generic interface with a read-only Value property of <see cref="!:T"/> type and a ValueChanged event.
+      </summary>
+      <typeparam name="T">A data type.</typeparam>
+    </member>
+    <member name="E:UnfallenLauncherAPI.IReadOnlyDataService`1.ValueChanged">
+      <summary>
+        Occurs when <see cref="P:UnfallenLauncherAPI.IReadOnlyDataService`1.Value"/> is changed.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.IReadOnlyDataService`1.Value">
+      <summary>
+        The value of the service.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.ReceiveEventHandler">
+      <summary>
+        Represents the method that will handle <see cref="E:UnfallenLauncherAPI.IService.Receive"/>.
+      </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">
+        A <see cref="T:UnfallenLauncherAPI.ReceiveEventArgs"/> object that contains the event data.
+      </param>
+    </member>
+    <member name="T:UnfallenLauncherAPI.IService">
+      <summary>
+        <b>
+          This interface is a base to create an service class.<br/>
+          Service classes are wrapper to Unfallen Launcher services.
+        </b>
+        <para/>This interface has four members:<br/>
+        - <see cref="T:System.String"/> Name property<br/>
+        - <see cref="T:System.Object"/> Output property<br/>
+        - <see cref="T:UnfallenLauncherAPI.ReceiveEventArgs"/> Receive event<br/>
+        - Send (<see cref="T:System.Object"/> <see langword="array"/> parameters) method
+      </summary>
+    </member>
+    <member name="E:UnfallenLauncherAPI.IService.Receive">
+      <summary>
+        Occurs when the internal host receive the <see cref="M:UnfallenLauncherAPI.IService.Send(System.Object[])"/> parameters.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.IService.Name">
+      <summary>
+        The service name/id.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.IService.Output">
+      <summary>
+        The output of <see cref="E:UnfallenLauncherAPI.IService.Receive"/> event.
+      </summary>
+    </member>
+    <member name="M:UnfallenLauncherAPI.IService.Send(System.Object[])">
+      <summary>
+        Send <paramref name="parameters"/> to the internal host.
+      </summary>
+      <param name="parameters">Data to send.</param>
+    </member>
+    <member name="T:UnfallenLauncherAPI.ReceiveEventArgs">
+      <summary>
+        Provides data for <see cref="E:UnfallenLauncherAPI.IService.Receive"/> event.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.ReceiveEventArgs.Params">
+      <summary>
+        Received data.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.ReceiveEventArgs.Result">
+      <summary>
+        The event output.
+      </summary>
+    </member>
+    <member name="M:UnfallenLauncherAPI.ReceiveEventArgs.#ctor(UnfallenLauncherAPI.IService,System.Object[])">
+      <summary>
+        Initializes a new instance of <see cref="T:UnfallenLauncherAPI.ReceiveEventArgs"/>.
+      </summary>
+      <param name="sender">The event sender.</param>
+      <param name="parameters">Received data.</param>
+    </member>
+    <member name="T:UnfallenLauncherAPI.ServiceBase">
+      <summary>
+        <see cref="T:UnfallenLauncherAPI.IService"/> base class.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.ITab">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IService"/> interface with a <see cref="T:System.Boolean"/> IsOpen property,
+        an Opened event and a Closed event.
+      </summary>
+    </member>
+    <member name="E:UnfallenLauncherAPI.ITab.Opened">
+      <summary>
+        Occurs when the tab is opened.
+      </summary>
+    </member>
+    <member name="E:UnfallenLauncherAPI.ITab.Closed">
+      <summary>
+        Occurs when the tab is closed.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.ITab.IsOpen">
+      <summary>
+        If it's true, the tab is open, otherwise, no.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.IVisibleService">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IService"/> interface with a <see cref="T:System.Boolean"/> Visible property and a VisibleChanged event.
+      </summary>
+    </member>
+    <member name="E:UnfallenLauncherAPI.IVisibleService.VisibleChanged">
+      <summary>
+        Occurs when <see cref="P:UnfallenLauncherAPI.IVisibleService.Visible"/> is changed.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.IVisibleService.Visible">
+      <summary>
+        If it's true, the service is visible, otherwise, no.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.IWindow">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IService"/> interface with a <see cref="T:System.Drawing.Point"/> Location property,
+        a LocationChanged event,
+        a <see cref="T:UnfallenLauncherAPI.WindowState"/> State property,
+        a StateChanged event,
+        a <see cref="T:System.Boolean"/> Notify property,
+        a ClosedToNotify event and an OpenedFromNotify event.
+      </summary>
+    </member>
+    <member name="E:UnfallenLauncherAPI.IWindow.LocationChanged">
+      <summary>
+        Occurs when <see cref="P:UnfallenLauncherAPI.IWindow.Location"/> is changed.
+      </summary>
+    </member>
+    <member name="E:UnfallenLauncherAPI.IWindow.StateChanged">
+      <summary>
+        Occurs when <see cref="P:UnfallenLauncherAPI.IWindow.State"/> is changed.
+      </summary>
+    </member>
+    <member name="E:UnfallenLauncherAPI.IWindow.ClosedToNotify">
+      <summary>
+        Occurs when the window is closed to notify.
+      </summary>
+    </member>
+    <member name="E:UnfallenLauncherAPI.IWindow.OpenedFromNotify">
+      <summary>
+        Occurs when the window is opened from notify.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.IWindow.Location">
+      <summary>
+        The location of the window on the screen.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.IWindow.State">
+      <summary>
+        The window state.
+      </summary>
+    </member>
+    <member name="P:UnfallenLauncherAPI.IWindow.Notify">
+      <summary>
+        If it's true, the window is closed to notify, otherwise, no.
+      </summary>
+    </member>
+    <member name="T:UnfallenLauncherAPI.IWorker">
+      <summary>
+        An <see cref="T:UnfallenLauncherAPI.IService"/> interface with a DoWork method and a Worked event.
+        an Opened event and a Closed event.
+      </summary>
+    </member>
+    <member name="E:UnfallenLauncherAPI.IWorker.Worked">
+      <summary>
+        Occurs when the service worked.
+      </summary>
+    </member>
+    <member name="M:UnfallenLauncherAPI.IWorker.DoWork">
+      <summary>
+        Does the service work.
+      </summary>
+    </member>
+  </members>
+</doc>
